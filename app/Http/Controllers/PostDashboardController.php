@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Str;
-
+use Illuminate\Support\Facades\Validator;
 
 class PostDashboardController extends Controller
 {
@@ -41,19 +41,41 @@ class PostDashboardController extends Controller
      */
     public function store(Request $request)
     {
-        $validated = $request->validate([
+        // $validated = $request->validate([
+        //     'title' => 'required|unique:posts|min:4|max:255',
+        //     'category_id' => 'required',
+        //     'body' => 'required',
+        // ]);
+
+        Validator::make($request->all(), [
             'title' => 'required|unique:posts|min:4|max:255',
             'category_id' => 'required',
             'body' => 'required',
-        ]);
+        ],
+        [
+            'title.required' => 'Title is required',
+            'category_id.required' => 'Category is required',
+            'body.required' => 'Body is required'
+        ],
+        [
+            'title' => 'Title',
+            'category_id' => 'Category',
+            'body' => 'Body'
+        ])->validate();
 
-        Post::create([
-            'title' => $validated['title'],
-            'author_id' => Auth::user()->id,
-            'category_id' => $validated['category_id'],
-            'slug' => Str::slug($validated['title']),
-            'body' => $validated['body'],
-        ]);
+        // if (validator->fails()) {
+        //     return redirect()->back()
+        //         ->withErrors($validator)
+        //         ->withInput();
+        // }
+
+        // Post::create([
+        //     'title' => $validated['title'],
+        //     'author_id' => Auth::user()->id,
+        //     'category_id' => $validated['category_id'],
+        //     'slug' => Str::slug($validated['title']),
+        //     'body' => $validated['body'],
+        // ]);
 
         return redirect('/dashboard')->with('success', 'New post has been added!');
     }
@@ -86,21 +108,13 @@ class PostDashboardController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        if ($post->author_id !== Auth::id()) {
-            abort(403);
-        }
-
+        //validate
         $validated = $request->validate([
-            'title' => [
-                'required',
-                'min:4',
-                'max:255',
-                Rule::unique('posts', 'title')->ignore($post->id),
-            ],
+            'title' => 'required|min:4|max:255|unique:posts,title' . $post->id,
             'category_id' => 'required',
             'body' => 'required',
         ]);
-
+        //update post
         $post->update([
             'title' => $validated['title'],
             'category_id' => $validated['category_id'],
@@ -108,7 +122,32 @@ class PostDashboardController extends Controller
             'body' => $validated['body'],
         ]);
 
+        //redirect
         return redirect('/dashboard')->with('success', 'Post has been updated!');
+
+        // if ($post->author_id !== Auth::id()) {
+        //     abort(403);
+        // }
+
+        // $validated = $request->validate([
+        //     'title' => [
+        //         'required',
+        //         'min:4',
+        //         'max:255',
+        //         Rule::unique('posts', 'title')->ignore($post->id),
+        //     ],
+        //     'category_id' => 'required',
+        //     'body' => 'required',
+        // ]);
+
+        // $post->update([
+        //     'title' => $validated['title'],
+        //     'category_id' => $validated['category_id'],
+        //     'slug' => Str::slug($validated['title']),
+        //     'body' => $validated['body'],
+        // ]);
+
+        // return redirect('/dashboard')->with('success', 'Post has been updated!');
     }
 
     /**

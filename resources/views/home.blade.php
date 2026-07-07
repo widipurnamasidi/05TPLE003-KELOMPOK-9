@@ -2,7 +2,7 @@
     {{-- <section class="bg-white dark:bg-gray-900">
         <div class="mx-auto max-w-7xl px-4 py-8 lg:px-6 lg:py-16">
             <div class="mx-auto mb-8 max-w-screen-sm text-center lg:mb-16">
-                <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">Meet Our Explorers</h2>
+                <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">Welcome to Blog kelompok 9 - Meet Our Explorers</h2>
                 <p class="font-light text-gray-500 dark:text-gray-400 sm:text-xl">
                     Meet the passionate travelers, storytellers, and photographers behind the journeys and guides on TravelBlog.
                 </p>
@@ -10,7 +10,7 @@
 
             <div class="grid gap-8 md:grid-cols-2 xl:grid-cols-5">
                 <div class="overflow-hidden rounded-lg bg-gray-50 shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col">
-                    <img class="h-56 w-full object-cover" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" alt="Siti Adilla">
+                    <img class="h-56 w-full object-cover" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/siti-adilla.png" alt="Siti Adilla">
                     <div class="p-5 flex-1 flex flex-col">
                         <div>
                             <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">Siti Adilla</h3>
@@ -45,7 +45,7 @@
                 </div>
 
                 <div class="overflow-hidden rounded-lg bg-gray-50 shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col">
-                    <img class="h-56 w-full object-cover" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/husien-septiawan.png" alt="Muhammad Naufal Rifqi" onerror="this.onerror=null;this.src='https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png';">
+                    <img class="h-56 w-full object-cover" src="" alt="Muhammad Naufal Rifqi" onerror="this.onerror=null;this.src='https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png';">
                     <div class="p-5 flex-1 flex flex-col">
                         <div>
                             <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">Muhammad Naufal Rifqi</h3>
@@ -61,7 +61,7 @@
                 </div>
 
                 <div class="overflow-hidden rounded-lg bg-gray-50 shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col">
-                    <img class="h-56 w-full object-cover" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png" alt="Widi Purnama Sidi">
+                    <img class="h-56 w-full object-cover" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/widi-purnama-sidi.png" alt="Widi Purnama Sidi">
                     <div class="p-5 flex-1 flex flex-col">
                         <div>
                             <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">Widi Purnama Sidi</h3>
@@ -77,7 +77,7 @@
                 </div>
 
                 <div class="overflow-hidden rounded-lg bg-gray-50 shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col">
-                    <img class="h-56 w-full object-cover" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/sofia-mcguire.png" alt="Bella Oktaviani">
+                    <img class="h-56 w-full object-cover" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bella-oktaviani.png" alt="Bella Oktaviani">
                     <div class="p-5 flex-1 flex flex-col">
                         <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">Bella Oktaviani</h3>
                         <span class="text-gray-500 dark:text-gray-400">Community &amp; PR Manager</span>
